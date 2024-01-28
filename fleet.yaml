@@ -1,4 +1,11 @@
 defaultNamespace: mosquitto
-  
+
+NamespaceLabels:
+  app.kubernetes.io/managed-by: Helm
+
+NamespaceAnnotations:
+  meta.helm.sh/release-name: mosquitto
+  meta.helm.sh/release-namespace: mosquitto
+
 kustomize:
   dir: ""
