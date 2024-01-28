@@ -1,5 +1,4 @@
 resources:
-- namespace.yaml
 - cm.yaml
 - deploy.yaml
 - svc.yaml
