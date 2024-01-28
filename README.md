@@ -10,7 +10,6 @@ metadata:
     mosquitto: enabled
 spec:
   branch: main
-  clientSecretName: auth-hp48c
   repo: https://github.com/NicoOosterwijk/mosquitto-k8s.git
   targets:
     - clusterGroup: mosquitto
