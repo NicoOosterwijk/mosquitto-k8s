@@ -1,0 +1,28 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  labels:
+    app.kubernetes.io/managed-by: Helm
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+    meta.helm.sh/release-name: mosquitto
+    meta.helm.sh/release-namespace: mosquitto
+    # cert-manager.io/cluster-issuer: "letsencrypt"
+  name: mosquitto
+  namespace: mosquitto    
+spec:
+  # tls:
+  # - hosts:
+  #   - mqtt.digitalinfo.local
+  #   secretName: mosquitto-certs
+  rules:
+  - host: mqtt.digitalinfo.local
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: mosquitto-mqtts
+            port: 
+              number: 8883

@@ -1,0 +1,4 @@
+defaultNamespace: mosquitto
+  
+kustomize:
+  dir: ""
