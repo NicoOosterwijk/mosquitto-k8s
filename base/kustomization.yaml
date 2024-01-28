@@ -1,8 +1,8 @@
 resources:
 - namespace.yaml
 - cm.yaml
-- deploy.yml
-- svc.yml
+- deploy.yaml
+- svc.yaml
 #- ingress.yml
 commonLabels:
   app.kubernetes.io/name: mosquitto
